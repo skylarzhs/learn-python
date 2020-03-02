@@ -1,6 +1,9 @@
 ### Python 学习笔记
 
-学习计划：
+>[Python官网](https://www.python.org/)
+
+#### 学习计划：
+
 1. 基础知识学习。
 
     结合廖雪峰官方网站 [Python教程](https://www.liaoxuefeng.com/wiki/1016959663602400)，极客时间 Python 入门课程进行学习。
@@ -16,5 +19,5 @@
     其他框架待补充。
 
     预期时间1~2个月。
-    
+
 3. 项目实战。
