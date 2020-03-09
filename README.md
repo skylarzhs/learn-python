@@ -31,3 +31,11 @@
     预期时间1~2个月。
 
 3. 项目实战。
+
+----------
+
+#### 笔记
+
+1. [介绍](./Tutorial/01.introduction.md)
+2. [安装](./Tutorial/02.install.md)
+3. [基本数据结构](./Tutorial/03.datastructure.md)
