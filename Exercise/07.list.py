@@ -55,3 +55,18 @@ print(classmates)
 # print('替换之后')
 # print('列表数据，第一个元素为',classmates[0],'最后一个元素为',classmates[-1])
 
+collective = [classmates,'Teacher A']
+
+print(collective)
+
+print(len(collective))
+
+print(collective[-1])
+
+print(collective[0])
+
+print(collective[0][1])
+
+L = []
+
+print(len(L))
