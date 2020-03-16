@@ -39,3 +39,4 @@
 1. [介绍](./Tutorial/01.introduction.md)
 2. [安装](./Tutorial/02.install.md)
 3. [基础语法](./Tutorial/03.basic.md)
+4. [函数](./Tutorial/04.function.md)
