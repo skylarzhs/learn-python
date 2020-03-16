@@ -40,3 +40,7 @@
 2. [安装](./Tutorial/02.install.md)
 3. [基础语法](./Tutorial/03.basic.md)
 4. [函数](./Tutorial/04.function.md)
+
+#### 问题记录
+
+[问题](./Tutorial/questions.md)
