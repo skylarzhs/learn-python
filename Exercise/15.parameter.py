@@ -66,12 +66,54 @@
 
 # 利用 None 对象修改
 
-def add_end(L=None):
-    if L is None:
-        L = []
-    L.append('END')
-    return L
+# def add_end(L=None):
+#     if L is None:
+#         L = []
+#     L.append('END')
+#     return L
 
-print(add_end())
-print(add_end())
-print(add_end())
+# print(add_end())
+# print(add_end())
+# print(add_end())
+
+# 给定一组数字a，b，c……，请计算a2 + b2 + c2 + ……
+
+# def calc(numbers):
+#     s = 0
+#     for i in numbers:
+#         s = s + i*i
+
+#     return s
+
+# print(calc([1,2,3]))
+
+# 可变参数修改，增加*，函数内部默认接收一个tuple
+
+# def calc(*numbers):
+#     s = 0
+#     for i in numbers:
+#         s = s + i * i
+#     return s
+
+# print(calc(1,2,3)) #可变参数调用
+
+# print(calc()) # 无参数
+
+# l = [2,3,4]
+
+# print(calc(*l)) #使用可变参数方式，调用已有list
+
+# 关键字参数
+
+def person(name, age, **other):
+    print('name:', name, 'age:', age, 'other', other)
+
+
+person('Lisa', 12)
+person('Tom', 21, city='JN')
+person('Lisa', 12, city='LW', job='Engineer')
+
+
+info = {'job':'PHPer','city':'BJ','sex':'F'}
+
+person('Jane',32,**info)
