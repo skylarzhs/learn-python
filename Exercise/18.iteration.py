@@ -35,14 +35,15 @@
 
 # 练习，使用迭代查找一个list中的最大和最小值，并返回一个tuple
 
+# 在此练习中没有考虑 None 的情况，按照正序流程
 
 def findMinAndMax(L):
-    min = None
-    max = None
 
-    if len(L) > 0:
-        min = L[0]
-        max = L[0]
+    if len(L) == 0:
+        return (None,None)
+
+    min = L[0]
+    max = L[0]
     
     for v in L:
         if v > max:
