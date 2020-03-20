@@ -40,7 +40,8 @@
 2. [安装](./Tutorial/02.install.md)(3.9)
 3. [基础语法](./Tutorial/03.basic.md)(3.10-3.14)
 4. [函数](./Tutorial/04.function.md)(3.16-3.17)
-5. [高级特性](./Tutorial/05.advanceFeatures.md)(3.18-)
+5. [高级特性](./Tutorial/05.advanceFeatures.md)(3.18-3.20)
+6. [函数式编程](./Tutorial/06.functionalProgramming.md)(3.20-)
 
 #### 问题记录
 
