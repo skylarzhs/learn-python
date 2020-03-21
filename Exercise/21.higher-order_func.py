@@ -254,18 +254,23 @@
 
 # 回数是指从左向右读和从右向左读都是一样的数，例如12321，909。请利用filter()筛选出回数
 
+# def is_palindrome(num):
+#     num = str(num)
+#     p = (len(num) + 1)//2
+#     n = 0
+
+#     ret = True
+
+#     while n < p:
+#         if num[n] != num[-n-1]:
+#             return False
+#         n = n + 1
+#     return ret
+
+
+# 灵活运用切片 !!!!!!
 def is_palindrome(num):
-    num = str(num)
-    p = (len(num) + 1)//2
-    n = 0
-
-    ret = True
-
-    while n < p:
-        if num[n] != num[-n-1]:
-            return False
-        n = n + 1
-    return ret
+    return str(num) == str(num)[::-1]
 
 
 # print(is_palindrome(11221))
