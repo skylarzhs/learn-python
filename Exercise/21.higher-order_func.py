@@ -78,7 +78,7 @@
 # import 语句提前
 # 转换字典定义提前
 
-from functools import reduce
+# from functools import reduce
 
 # d = {'0': 0, '1': 1, '2': 2, '3': 3, '4': 4,
 #      '5': 5, '6': 6, '7': 7, '8': 8, '9': 9}
@@ -162,30 +162,73 @@ from functools import reduce
 
 # 练习3：利用map和reduce编写一个str2float函数，把字符串'123.456'转换成浮点数123.456：
 
-d = {'0': 0, '1': 1, '2': 2, '3': 3, '4': 4,
-     '5': 5, '6': 6, '7': 7, '8': 8, '9': 9}
+# d = {'0': 0, '1': 1, '2': 2, '3': 3, '4': 4,
+#      '5': 5, '6': 6, '7': 7, '8': 8, '9': 9}
 
 
-def str2float(string):
-    dot_index = string.find('.')
+# def str2float(string):
+#     dot_index = string.find('.')
 
-    str1 = string[:dot_index]
-    str2 = string[dot_index+1:]
+#     str1 = string[:dot_index]
+#     str2 = string[dot_index+1:]
 
-    def f1(x, y):
-        return 10 * x + y
+#     def f1(x, y):
+#         return 10 * x + y
 
-    def f2(x, y):
-        return 0.1 * x + y
+#     def f2(x, y):
+#         return 0.1 * x + y
 
-    def char2int(c):
-        return d[c]
+#     def char2int(c):
+#         return d[c]
 
-    return reduce(f1, map(char2int, str1)) + 0.1 * reduce(f2, map(char2int, reversed(str2)))
+#     return reduce(f1, map(char2int, str1)) + 0.1 * reduce(f2, map(char2int, reversed(str2)))
 
 
-print('str2float(\'123.456\') =', str2float('123.456'))
-if abs(str2float('123.456') - 123.456) < 0.00001:
-    print('测试成功!')
-else:
-    print('测试失败!')
+# print('str2float(\'123.456\') =', str2float('123.456'))
+# if abs(str2float('123.456') - 123.456) < 0.00001:
+#     print('测试成功!')
+# else:
+#     print('测试失败!')
+
+# filter
+
+# 在一个list中，删掉偶数，只保留奇数
+
+# def is_odd(x):
+#     return x % 2 == 1
+
+# print(list(filter(is_odd,[1.2,3,4,5,6,7,8,9])))
+
+# 把一个序列中的空字符串删掉
+
+# def is_blank(s):
+#     return s != ' '
+
+# print(list(filter(is_blank,'He l  lo, world !')))
+
+# 求素数  埃氏筛法
+# （1）先把1删除（现今数学界1既不是质数也不是合数）
+# （2）读取队列中当前最小的数2，然后把2的倍数删去
+# （3）读取队列中当前最小的数3，然后把3的倍数删去
+# （4）读取队列中当前最小的数5，然后把5的倍数删去
+# （5）读取队列中当前最小的数7，然后把7的倍数删去
+# （6）如上所述直到需求的范围内所有的数均删除或读取
+
+# 定义从3开始的奇数列
+
+def _odd_iter():
+    n = 1
+    while True:
+        n = n + 2
+        yield n
+
+# 定义筛选函数
+
+
+def _not_divisible(n):
+    lambda x: x % n != 0
+
+# 定义生成器，不断返回下一个素数
+
+def primes():
+    
