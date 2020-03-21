@@ -216,19 +216,68 @@
 
 # 定义从3开始的奇数列
 
-def _odd_iter():
-    n = 1
-    while True:
-        n = n + 2
-        yield n
+# def _odd_iter():
+#     n = 1
+#     while True:
+#         n = n + 2
+#         yield n
 
 # 定义筛选函数
 
 
-def _not_divisible(n):
-    lambda x: x % n != 0
+# def _not_divisible(n):
+#     return lambda x: x % n > 0
 
 # 定义生成器，不断返回下一个素数
 
-def primes():
-    
+# def primes():
+#     n = 2
+#     yield n
+#     it = _odd_iter()
+
+#     while True:
+#         n = next(it)
+#         yield n
+#         it = filter(_not_divisible(n), it)
+
+
+# n = 0
+
+# d = primes()
+# for i in d:
+#     if n < 100:
+#         print(i)
+#     else:
+#         break
+
+#     n = n+1
+
+# 回数是指从左向右读和从右向左读都是一样的数，例如12321，909。请利用filter()筛选出回数
+
+def is_palindrome(num):
+    num = str(num)
+    p = (len(num) + 1)//2
+    n = 0
+
+    ret = True
+
+    while n < p:
+        if num[n] != num[-n-1]:
+            return False
+        n = n + 1
+    return ret
+
+
+# print(is_palindrome(11221))
+
+L = [1122,4455,4554,1221,12345]
+
+print(list(filter(is_palindrome,L)))
+
+# 测试:
+output = filter(is_palindrome, range(1, 1000))
+print('1~1000:', list(output))
+if list(filter(is_palindrome, range(1, 200))) == [1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 22, 33, 44, 55, 66, 77, 88, 99, 101, 111, 121, 131, 141, 151, 161, 171, 181, 191]:
+    print('测试成功!')
+else:
+    print('测试失败!')
