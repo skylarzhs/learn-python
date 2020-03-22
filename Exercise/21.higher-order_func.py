@@ -275,14 +275,58 @@ def is_palindrome(num):
 
 # print(is_palindrome(11221))
 
-L = [1122,4455,4554,1221,12345]
+# L = [1122,4455,4554,1221,12345]
 
-print(list(filter(is_palindrome,L)))
+# print(list(filter(is_palindrome,L)))
 
 # 测试:
-output = filter(is_palindrome, range(1, 1000))
-print('1~1000:', list(output))
-if list(filter(is_palindrome, range(1, 200))) == [1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 22, 33, 44, 55, 66, 77, 88, 99, 101, 111, 121, 131, 141, 151, 161, 171, 181, 191]:
-    print('测试成功!')
-else:
-    print('测试失败!')
+# output = filter(is_palindrome, range(1, 1000))
+# print('1~1000:', list(output))
+# if list(filter(is_palindrome, range(1, 200))) == [1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 22, 33, 44, 55, 66, 77, 88, 99, 101, 111, 121, 131, 141, 151, 161, 171, 181, 191]:
+#     print('测试成功!')
+# else:
+#     print('测试失败!')
+
+# sorted
+
+# print(sorted([1, 4, 6, 2, 3, 1]))
+
+# print(sorted([1, 5, -9, 8, -2]))
+
+# print(sorted([1, 5, -9, 8, -2], key=abs))
+
+# print(sorted([1, 5, -9, 8, -2], reverse=True))
+
+# print(sorted([1, 5, -9, 8, -2], key=abs, reverse=True))
+
+# print(sorted(['bob', 'about', 'Zoo', 'Credit']))
+
+# print(sorted(['bob', 'about', 'Zoo', 'Credit'], key=str.lower))
+
+# print(sorted(['bob', 'about', 'Zoo', 'Credit'], key=str.lower, reverse=True))
+
+# 练习
+# 假设我们用一组tuple表示学生名字和成绩：
+
+# L = [('Bob', 75), ('Adam', 92), ('Bart', 66), ('Lisa', 88)]
+# 请用sorted()对上述列表分别按名字排序：
+
+L = [('Bob', 75), ('Adam', 92), ('Bart', 66), ('Lisa', 88)]
+
+
+def by_name(t):
+    return t[0].lower()
+
+
+L2 = sorted(L, key=by_name)
+
+print(L2)
+
+
+def by_score(t):
+    return t[1]
+
+
+L3 = sorted(L, key=by_score, reverse=True)
+
+print(L3)
