@@ -132,7 +132,7 @@
 #     fs = []
 #     for i in range(1, 4):
 #         fs.append(f(i))
-        
+
 #     return fs
 
 # f1, f2, f3 = count()
@@ -147,19 +147,34 @@
 # 利用闭包返回一个计数器函数，每次调用它返回递增整数：
 
 def createCounter():
-    def counter(i):
-        return  i + 1
-    
-    L = []
-    i = 0
-    while True:
-        it = counter(i)
-        L.append(it)
-        i = i + 1
-    return L
 
-f1 = createCounter()
+    i = 0 # 先定义一个变量作为初始值
 
-print(f1)
+    def counter():
+        nonlocal i  # 声明变量i非内部函数的局部变量，否则内部函数只能引用，一旦修改会视其为局部变量，报错“局部变量在赋值之前被引用”。
+        i = i + 1 # 每调用一次内部函数，对i + 1 ======= 重点是修改全局变量的值！
+        return i
 
-# print(f1(),f1(),f1())
+    return counter
+
+
+# f1 = createCounter()
+# print(777777)
+# print(f1)
+
+# print(f1(), f1(), f1())
+
+# f2 = createCounter()
+
+# print(f2)
+
+# print(f2(),f2(),f2())
+
+# 测试:
+counterA = createCounter()
+print(counterA(), counterA(), counterA(), counterA(), counterA()) # 1 2 3 4 5
+counterB = createCounter()
+if [counterB(), counterB(), counterB(), counterB()] == [1, 2, 3, 4]:
+    print('测试通过!')
+else:
+    print('测试失败!')
