@@ -62,6 +62,7 @@ class Screen(object):
     def resolution(self):
         return self.__width * self.__height
 
+
 s = Screen()
 
 s.height = 100
