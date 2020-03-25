@@ -50,7 +50,9 @@
 
 7. [模块](./Tutorial/07.module.md)(3.23-3.23)
 
-8. [面向对象编程](./Tutorial/08.OOP.md)(3.23-)
+8. [面向对象编程](./Tutorial/08.OOP.md)(3.23-3.25)
+
+9.[面向对象高级编程](./Tutorial/09.advancedOOP.md)(3.25-)
 
 #### 问题记录
 
