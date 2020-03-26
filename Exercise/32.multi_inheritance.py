@@ -25,3 +25,12 @@ class Dog(Mammal,Runnable):
 
 class Parrot(Bird,Flyable):
     pass
+
+class MyTCPServer(TCPServer,ForkingMixIn):
+    pass
+
+class MyUDPServer(UDPServer,ThreadingMixIn):
+    pass
+
+class MyTCPServer(TCPServer,CoroutineMixIn):
+    pass
