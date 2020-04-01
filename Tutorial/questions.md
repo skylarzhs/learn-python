@@ -36,3 +36,33 @@ f1(*args, *kw) #单个*取键名作为可变参数的一部分
 4. 生成器
 
     生成器中关于`yield`的概念理解不是很清楚。
+
+5. 奇怪的案例
+
+```
+>>> try:
+...     print('try...')
+...     r = 10 / 0
+...     print('result:',r)
+... except ZeroDivisionError as e:
+...     print('except:',e)
+... finally:
+...     print('finally...')
+...
+try...
+except: division by zero
+finally...
+>>> try:
+...     print('try...')
+...     r = 10 /0
+...     print('result:',r)
+... except ZeroDivisionError as e:
+...     print('except:',e)
+... finally:
+...     print('finally...')
+... print('end')
+  File "<stdin>", line 9
+    print('end') ###############运行出错，原因？？
+    ^
+SyntaxError: invalid syntax
+```
