@@ -16,9 +16,13 @@ class Student(object):
         print('name：%s score: %s' % (self.__name, self.__score))
 
     def get_grade(self):
-        if self.__score <= 60:
+        if not isinstance(self.__score,(int,float)):
+            raise ValueError('score is not invalid')
+        if self.__score > 100 or self.__score < 0:
+            raise ValueError('score is not invalid')
+        if self.__score < 60:
             return 'C'
-        elif self.__score <= 80:
+        elif self.__score < 80:
             return 'B'
         else:
             return 'A'
