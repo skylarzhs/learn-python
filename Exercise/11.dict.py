@@ -1,4 +1,4 @@
-# -*- encoding:utf-8 -*-
+# -*- coding:utf-8 -*-
 
 d = {'Tom': 78, 'Jane': 88, 'Pony': 67}
 

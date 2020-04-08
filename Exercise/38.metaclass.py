@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# -*- encoding : utf-8 -*-
+# -*- coding : utf-8 -*-
 
 # metaclass是类的模板，所以必须从`type`类型派生：
 

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# -*- encoding:utf8 -*-
+# -*- coding:utf8 -*-
 
 'Extends test file'
 

@@ -1,4 +1,4 @@
-# -*- encoding : utf-8 -*-
+# -*- coding : utf-8 -*-
 n1 = 255
 n2 = 1000
 

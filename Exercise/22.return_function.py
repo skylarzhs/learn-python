@@ -1,4 +1,4 @@
-# -*- encoding:utf-8 -*-
+# -*- coding:utf-8 -*-
 
 # 可变参数求和
 
@@ -80,7 +80,7 @@
 #         print(fs)
 #         print(i)
 #         print(f(i))
-#         fs.append(f(i))
+#         fs.append(f(i)) # f(i)立刻被执行，因此i的当前值被传入f()
 #         print(9999999)
 #     print(fs)
 #     return fs

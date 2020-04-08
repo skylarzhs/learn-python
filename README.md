@@ -54,7 +54,9 @@
 
 9. [面向对象高级编程](./Tutorial/09.advancedOOP.md)(3.25-3.30)
 
-10. [错误、调试和测试](./Tutorial/10.error_debug_test.md)(4.1-)
+10. [错误、调试和测试](./Tutorial/10.error_debug_test.md)(4.1-4.6)
+
+11. [IO编程](./Tutorial/11.io.md)(4.8-)
 
 #### 问题记录
 

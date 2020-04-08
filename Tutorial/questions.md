@@ -66,3 +66,7 @@ finally...
     ^
 SyntaxError: invalid syntax
 ```
+
+6. 闭包
+
+返回闭包时牢记一点：返回函数不要引用任何循环变量，或者后续会发生变化的变量。
