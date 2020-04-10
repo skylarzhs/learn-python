@@ -33,11 +33,22 @@ if __name__ == '__main__':
     # pr进程是死循环，无法等待其结束，只能强行终止
     pr.terminate()
 
-# Process to write : 10908
-# Process to read: 6784
-# Put A to queue...
-# Get A from queue.
-# Put B to queue...
-# Get B from queue.
-# Put C to queue...
-# Get C from queue.
+# win10下第一次的运行结果
+# --| Process to write : 10908
+# --| Process to read: 6784
+# --| Put A to queue...
+# --| Get A from queue.
+# --| Put B to queue...
+# --| Get B from queue.
+# --| Put C to queue...
+# --| Get C from queue.
+
+# Linux下运行结果
+# --| Process to write : 18898
+# --| Put A to queue...
+# --| Process to read: 18899
+# --| Get A from queue.
+# --| Put B to queue...
+# --| Get B from queue.
+# --| Put C to queue...
+# --| Get C from queue.
