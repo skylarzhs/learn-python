@@ -44,3 +44,28 @@ for i in range(10):
 # close
 manager.shutdown()
 print('master exit')
+
+# --| Put task %d... 9617
+# --| Put task %d... 6050
+# --| Put task %d... 8424
+# --| Put task %d... 7709
+# --| Put task %d... 4353
+# --| Put task %d... 8875
+# --| Put task %d... 7521
+# --| Put task %d... 8250
+# --| Put task %d... 4891
+# --| Put task %d... 9276
+# --| Try get result...
+# --| Result : 9617 * 9617 = 92486689
+# --| Result : 6050 * 6050 = 36602500
+# --| Result : 8424 * 8424 = 70963776
+# --| Result : 7709 * 7709 = 59428681
+# --| Result : 4353 * 4353 = 18948609
+# --| Result : 8875 * 8875 = 78765625
+# --| Result : 7521 * 7521 = 56565441
+# --| Result : 8250 * 8250 = 68062500
+# --| Result : 4891 * 4891 = 23921881
+# --| Result : 9276 * 9276 = 86044176
+# --| master exit
+
+# 当我们在一台机器上写多进程程序时，创建的Queue可以直接拿来用，但是，在分布式多进程环境下，添加任务到Queue不可以直接对原始的task_queue进行操作，那样就绕过了QueueManager的封装，必须通过manager.get_task_queue()获得的Queue接口添加。
