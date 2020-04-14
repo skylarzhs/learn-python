@@ -60,6 +60,8 @@
 
 12. [进程和线程](./Tutorial/12.process_and_thread.md)(4.10)
 
+13. [正则表达式](./Tutorial/13.regex.md)(4.14)
+
 #### 问题记录
 
 [问题](./Tutorial/questions.md)
