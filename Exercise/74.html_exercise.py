@@ -25,6 +25,9 @@ class MyEventsParser(HTMLParser):
 
 
 parser = MyEventsParser()
-with request.urlopen('https://www.python.org/events/python-events/') as f:
-    content = re.match(r'<ul class="list-recent-events menu">(<li>(\w{1,})</li>)</ul>', f.read().encode('utf-8'))
+# with request.urlopen('https://www.python.org/events/python-events/') as f:
+with open(r'E:\projects\learn-python\Tutorial\static\html\events.html', 'r') as f:
+    html = f.read().replace('\n', '').replace('&nbsp;', '')
+    # print(html)
+    content = re.match(r'\<ul class="list-recent-events menu"\>', html)
     print(content)
