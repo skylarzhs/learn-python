@@ -35,6 +35,7 @@ parser.feed('''<html>
     <p>Some <a href=\"#\">html</a> HTML&nbsp;tutorial...<br>END</p>
 </body></html>''')
 
+# feed可以多次调用
 
 # <html>
 
