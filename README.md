@@ -66,7 +66,9 @@
 
 15. [常用第三方模块](./Tutorial/15.third-party_modules.md)(4.29-5.3)
 
-16. [virtualenv](../learn-python/Tutorial/16.virtualenv.md)(5.3)
+16. [virtualenv](./Tutorial/16.virtualenv.md)(5.3)
+
+17. [图形界面](./Tutorial/17.graphic_interface.md)
 
 #### 问题记录
 
