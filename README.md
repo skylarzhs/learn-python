@@ -68,7 +68,9 @@
 
 16. [virtualenv](./Tutorial/16.virtualenv.md)(5.3)
 
-17. [图形界面](./Tutorial/17.graphic_interface.md)
+17. [图形界面](./Tutorial/17.graphic_interface.md)(5.3)
+
+18. [网络编程](./Tutorial/18.network_programming.md)(5.4)
 
 #### 问题记录
 

@@ -72,3 +72,5 @@ SyntaxError: invalid syntax
 返回闭包时牢记一点：返回函数不要引用任何循环变量，或者后续会发生变化的变量。
 
 7. 递归调用，目录判断不正确问题。[具体参见](../Exercise/45.dir.py)
+
+8. socket中线程的开启，实际运行结果为全部是主线程，[具体参见](../Exercise/81.tcp_server.py)
